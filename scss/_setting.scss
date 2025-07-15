@@ -1,4 +1,5 @@
 // 基本設定
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @font-face {
   font-family: 'DIN2014';
   src: url('./fonts/DIN2014-Bold.woff') format('woff');
@@ -32,6 +33,7 @@ $txt-size: 1rem;
 $txt-size-sp: 0.75rem;
 $line-height: 2;
 $txt-font: 'Hiragino Kaku Gothic Pro', sans-serif;
+$title-font: 'Noto Sans', sans-serif;
 $sub-font: 'DIN2014', 'Arial', 'Helvetica', sans-serif;
 $accent-font:'Hiragino Kaku Gothic Pro', sans-serif;
 $txt-color: #444949;
