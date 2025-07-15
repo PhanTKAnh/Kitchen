@@ -1,15 +1,41 @@
 // 基本設定
+@font-face {
+  font-family: 'DIN2014';
+  src: url('./fonts/DIN2014-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN2014';
+  src: url('./fonts/DIN2014-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN2014';
+  src: url('./fonts/DIN2014-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hiragino Kaku Gothic Pro';
+  src: url('./fonts/繝偵Λ繧ュ繧吶ヮ譏取悃\ STD\ W3.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 $pc: 768px; // PC
 $sp: 767px; //スマートフォン
 $base-width: 1232px;
 $txt-size: 1rem;
 $txt-size-sp: 0.75rem;
 $line-height: 2;
-$txt-font: 'Dela Gothic One', 'Arial', 'Helvetica', 'Noto Sans', sans-serif;
-$sub-font: 'Noto Sans', sans-serif;
-$accent-font: "Noto Sans JP", sans-serif;
-$txt-color: #111111;
-$hover-color: #2FD9FF;
+$txt-font: 'Hiragino Kaku Gothic Pro', sans-serif;
+$sub-font: 'DIN2014', 'Arial', 'Helvetica', sans-serif;
+$accent-font:'Hiragino Kaku Gothic Pro', sans-serif;
+$txt-color: #444949;
+$hover-color: #FF5F00;
 $base-color: #1F4C9F;
 $btn-color: #008ECF;
 $span01: #ff3b3b;
