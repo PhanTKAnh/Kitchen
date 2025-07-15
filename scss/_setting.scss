@@ -35,12 +35,12 @@ $txt-font: 'Hiragino Kaku Gothic Pro', sans-serif;
 $sub-font: 'DIN2014', 'Arial', 'Helvetica', sans-serif;
 $accent-font:'Hiragino Kaku Gothic Pro', sans-serif;
 $txt-color: #444949;
-$hover-color: #FF5F00;
-$base-color: #1F4C9F;
-$btn-color: #008ECF;
+$base-color: #FFFFFF;
+$btn-color: #FF5F00;
 $span01: #ff3b3b;
 $span02: #088fdc;
-$bg01: #FFFFFF;
+$bg01: #FD9152;
+$bg02: #FFF3E5;
 $transition: .3s all ease-in-out;
 @mixin pc {
   @media (min-width: ($pc)),
