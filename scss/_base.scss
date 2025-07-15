@@ -101,3 +101,11 @@ main {
   padding: 0 15px;
   margin: 0 auto;
 }
+.container-lg{
+  max-width: 1536px;
+  padding: 0 48px;
+  margin: 0 auto;
+  @include sp {
+    padding: 0 15px;
+  }
+}
