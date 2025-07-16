@@ -1,120 +1,167 @@
 // Main Visual Section
 .hm_mainvisual {
   position: relative;
-
+  background-color: #fff3e5;
   .mv_item {
-    background-image: url(../imgs/home/bg-banner.gif);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 757px;
+    height: 668px;
     position: relative;
-    z-index: 1;
-
-    @include sp {
-      background-size: auto 100%;
-      height: 500px;
+    .mv_item__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1092px;
+      height: 668px;
+      object-fit: cover;
+      border-bottom-left-radius: 90px;
+      overflow: hidden;
+      @include sp {
+        border-bottom-left-radius: 0;
+      }
     }
   }
-
   .mv_inner {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-
+    z-index: 1;
     .mv_cnt {
-      max-width: 73%;
-      color: #fff;
-
+      color: $txt-color;
+      max-width: 46.2%;
+      position: relative;
+      left: 13%;
+      top: 0;
       @include sp {
         max-width: 100%;
+        left: 0;
       }
-
+      .mv_sub-ttl {
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: 3px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include sp {
+          font-size: 20px;
+          margin-bottom: 17px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
       .mv_ttl {
         line-height: 100%;
-        margin-bottom: 19px;
+        margin-bottom: 44px;
         letter-spacing: 1.5px;
         font-size: 70px;
         font-weight: 400;
-
-        span {
-          color: $span01;
+        P {
+          background-color: $base-color;
+          margin-bottom: 23px;
+          @include sp {
+            text-align: center;
+          }
         }
-
         @include sp {
           font-size: 30px;
           letter-spacing: -0.9px;
           margin-bottom: 13px;
         }
       }
-
-      .mv_sub-ttl {
-        line-height: 100%;
-        margin-bottom: 57px;
-        letter-spacing: 5px;
-        font-size: 48px;
-        font-weight: 400;
-
+      .mv_features {
+        display: flex;
+        gap: 15px;
         @include sp {
-          font-size: 20px;
-          margin-bottom: 17px;
-          letter-spacing: 0;
+          flex-direction: column;
+        }
+        .mv_feature {
+          border-radius: 50%;
+          border: 2px solid #ed652b;
+          aspect-ratio: 1 / 1;
+          padding: 22px 10px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 143px;
+          height: 143px;
+          background-color: $base-color;
+          font-family: $title-font;
+          @include sp {
+            border-radius: 0;
+            padding: 10px;
+            width: 100%;
+            height: 100px;
+          }
+          .mv_feature-img {
+            width: 35px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 19px;
+          }
+          .mv_feature-text {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 8%;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+          }
+          .mv_feature-heading {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 100%;
+            letter-spacing: 8%;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            color: #ed652b;
+          }
+        }
+        .mv_feature:nth-child(2) .mv_feature-img {
+          width: 30px;
+          margin-bottom: 10px;
+        }
+        .mv_feature:nth-child(3) .mv_feature-img {
+          width: 25px;
+          margin-bottom: 14px;
         }
       }
-
-      .mv_desc {
-        font-family: $sub-font;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 156%;
-        letter-spacing: 0;
-        width: 79%;
-
-        span {
-          font-weight: 900;
-        }
-
-        @include sp {
-          font-size: 14px;
-          width: 100%;
-        }
-      }
-
       .mv_btn {
         display: flex;
         gap: 15px;
-        margin-top: 57px;
-
+        margin-top: 42px;
         @include sp {
           flex-direction: column;
           gap: 8px;
           margin-top: 13px;
         }
-
         a {
-          color: $bg01;
-          border: 1px solid #ffffff;
+          color: $base-color;
+          border: 1px solid $btn-color;
+          border-radius: 30px;
           display: block;
-          font-weight: 900;
-          font-family: $sub-font;
-          padding: 12px 48px;
-          font-size: 16px;
+          padding: 19px 20px;
           text-align: center;
           text-decoration: none;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 1px;
+          width: 71%;
           transition: background-position 0.2s ease-in-out;
-
           &:active,
           &.is-active {
             background: $btn-color;
             border: 1px solid transparent;
           }
-
           &:hover {
             background: $btn-color;
             border: 1px solid transparent;
           }
-
           @include sp {
             padding: 8px 0px;
             width: 100%;
@@ -124,22 +171,4 @@
       }
     }
   }
-
-  .mv_bottom-deco {
-    background-image: url("../imgs/home/home\ bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    pointer-events: none;
-
-    @media screen and (max-width: 375px) {
-      background-image: url("../imgs/home/sp\ home\ bg.svg");
-    }
-  }
 }
-
-
