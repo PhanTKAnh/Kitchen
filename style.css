@@ -1038,4 +1038,232 @@ main {
   }
 }
 
+.hm-problem {
+  position: relative;
+  padding: 92px 0 0 0;
+  background: #FD9152;
+  text-align: center;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .hm-problem {
+    padding: 12px 0 41px;
+  }
+}
+.hm-problem__head {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+}
+.hm-problem__catch {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 180%;
+  letter-spacing: 0.8px;
+  margin: 6px 0 -17px -11px;
+}
+@media (max-width: 767px) {
+  .hm-problem__catch {
+    font-size: 12px;
+    margin: 12px 0 7px 0;
+  }
+}
+.hm-problem__title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+.hm-problem__title span {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+.hm-problem .hm-problem__cards {
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 48px auto 130px;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .hm-problem .hm-problem__cards {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 24px auto 0;
+    gap: 16px;
+    justify-items: center;
+  }
+}
+.hm-problem .problem-card {
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 25px 19px 72px 15px;
+  border-radius: 10px;
+}
+.hm-problem .problem-card::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 37px;
+  opacity: 1;
+  top: 219px;
+  left: 221px;
+  background: url("../imgs/home/Bubble Point.svg") no-repeat center/contain;
+}
+@media (max-width: 767px) {
+  .hm-problem .problem-card {
+    padding: 12px 20px;
+  }
+}
+.hm-problem .problem-card__img {
+  max-width: 53.7843284607px;
+  max-height: 44px;
+}
+.hm-problem .problem-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hm-problem .problem-card__avatar {
+  background: #FFFFFF;
+  position: absolute;
+  border: 2px solid #ED652B;
+  border-radius: 50%;
+  top: 184px;
+}
+.hm-problem .problem-card__avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.hm-problem .problem-card__text p {
+  margin: 16px 0 0 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0.08em;
+}
+.hm-problem .problem-card__text p span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0.08em;
+}
+.hm-problem__solution {
+  color: #FFFFFF;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Noto Sans", sans-serif;
+  border-top: 2px dashed #FFFFFF;
+  padding: 58px 0 0 0;
+}
+.hm-problem__solution-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 180%;
+  letter-spacing: 0.08em;
+}
+@media (max-width: 767px) {
+  .hm-problem__solution-text {
+    font-size: 20px;
+    margin: 37px -23px 0 14px;
+  }
+}
+.hm-problem__solution-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 180%;
+  letter-spacing: 0.08em;
+}
+@media (max-width: 767px) {
+  .hm-problem__solution-title {
+    font-size: 32px;
+  }
+}
+
+.easy-renovation {
+  position: relative;
+  padding: 92px 0 81px 0;
+  text-align: center;
+  background: url(../imgs/home/bg-easy.jpg) top left -48px;
+  background-repeat: no-repeat;
+  background-size: 109% auto;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .easy-renovation {
+    padding: 12px 0 41px;
+  }
+}
+.easy-renovation__head {
+  color: #444949;
+  font-family: "Noto Sans", sans-serif;
+}
+.easy-renovation__catch {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 180%;
+  letter-spacing: 0.8px;
+  margin: 95px 0 -9px -13px;
+}
+@media (max-width: 767px) {
+  .easy-renovation__catch {
+    font-size: 12px;
+    margin: 12px 0 7px 0;
+  }
+}
+.easy-renovation__title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+.easy-renovation__title span {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+.easy-renovation__content {
+  margin: 44px 0 20px 0;
+  font-family: "Hiragino Kaku Gothic Pro", sans-serif;
+}
+.easy-renovation__content p {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 180%;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.easy-renovation__content p span {
+  background: rgba(253, 145, 82, 0.2);
+  padding: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 180%;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.easy-renovation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -106px;
+  width: 100%;
+  height: 196px;
+  background-image: url("../imgs/home/Rectangle 1720.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom;
+  z-index: 1;
+}
+
 /*# sourceMappingURL=style.css.map */
