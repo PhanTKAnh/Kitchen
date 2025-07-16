@@ -2,8 +2,9 @@
 .hm_mainvisual {
   position: relative;
   background-color: #fff3e5;
+  top: 82px;
   .mv_item {
-    height: 668px;
+    height: 750px;
     position: relative;
     .mv_item__bg {
       position: absolute;
@@ -30,7 +31,7 @@
       max-width: 46.2%;
       position: relative;
       left: 13%;
-      top: 0;
+      top: -40px;
       @include sp {
         max-width: 100%;
         left: 0;

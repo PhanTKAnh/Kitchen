@@ -304,7 +304,7 @@ img {
 header {
   left: 0;
   min-height: 82px;
-  position: relative;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -850,9 +850,10 @@ main {
 .hm_mainvisual {
   position: relative;
   background-color: #fff3e5;
+  top: 82px;
 }
 .hm_mainvisual .mv_item {
-  height: 668px;
+  height: 750px;
   position: relative;
 }
 .hm_mainvisual .mv_item .mv_item__bg {
@@ -882,7 +883,7 @@ main {
   max-width: 46.2%;
   position: relative;
   left: 13%;
-  top: 0;
+  top: -40px;
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt {
