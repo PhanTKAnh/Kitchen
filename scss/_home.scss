@@ -259,6 +259,8 @@
 
     @include sp {
       padding: 16px;
+        text-align: center;
+
     }
 
 
@@ -409,8 +411,6 @@
 
   @include sp {
     padding: 33px 0 41px;
-    background-size: cover;
-    background-position: center top;
   }
 
   &__head {
@@ -475,7 +475,6 @@
 
       @include sp {
         font-size: 16px;
-        text-align: left;
         line-height: 170%;
       }
 
@@ -511,9 +510,7 @@
     z-index: 1;
 
     @include sp {
-      top: -91px;
-      height: 120px;
-      background-size: cover;
+     display: none;
     }
   }
 }
