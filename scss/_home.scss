@@ -178,7 +178,7 @@
 .hm-problem {
   position: relative;
   padding: 92px 0 0 0;
-  background: #FD9152;
+  background: #fd9152;
   text-align: center;
   z-index: 2;
 
@@ -189,8 +189,6 @@
   &__head {
     color: #ffffff;
     font-family: $title-font;
-
-
   }
 
   &__catch {
@@ -229,7 +227,6 @@
     }
   }
 
-
   .hm-problem__cards {
     max-width: 1062px;
     display: grid;
@@ -253,7 +250,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    background: #FFFFFF;
+    background: #ffffff;
     padding: 25px 19px 72px 15px;
     border-radius: 10px;
 
@@ -265,7 +262,7 @@
 
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 32px;
       height: 37px;
@@ -303,7 +300,7 @@
     }
 
     &__avatar {
-      background: #FFFFFF;
+      background: #ffffff;
       position: absolute;
       border: 2px solid#ED652B;
       border-radius: 50%;
@@ -323,7 +320,6 @@
 
         @include sp {}
       }
-
     }
 
     &__text {
@@ -349,18 +345,17 @@
             font-size: 13px;
           }
         }
-
       }
     }
   }
 
   &__solution {
-    color: #FFFFFF;
+    color: #ffffff;
     position: relative;
     max-width: 800px;
     margin: 0 auto;
     font-family: $title-font;
-    border-top: 2px dashed #FFFFFF;
+    border-top: 2px dashed #ffffff;
     padding: 58px 0 0 0;
 
     @include sp {
@@ -393,10 +388,7 @@
         text-align: left;
       }
     }
-
-
   }
-
 }
 
 // easy-renovation
@@ -411,13 +403,12 @@
 
   @include sp {
     padding: 33px 0 41px;
+    background-size: auto;
   }
 
   &__head {
     color: #444949;
     font-family: $title-font;
-
-
   }
 
   &__catch {
@@ -517,7 +508,7 @@
 
 // 
 .section-step {
-  padding: 80px 0 2px 0;
+  padding: 80px 0 0px 0;
   background-color: #FFF3E5;
 
   @include sp {
@@ -654,7 +645,7 @@
 
 // 
 .section-works {
-  padding: 80px 0 187px 0;
+  padding: 80px 0 154px 0;
   text-align: center;
   background: #FFF3E533;
 
@@ -877,5 +868,183 @@
       }
     }
 
+  }
+}
+
+// Flow Section
+.hm_flow {
+  background-color: $bg02;
+  padding: 101px 0 54px;
+  @include sp {
+    padding: 50px 0;
+  }
+  .hm_flow__head {
+    text-align: center;
+    margin-bottom: 43px;
+    @include sp {
+      margin-bottom: 20px;
+    }
+    .hm_flow__catch {
+      font-family: $sub-font;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 180%;
+      letter-spacing: 3px;
+      color: rgba(68, 73, 73, 0.2);
+      @include sp {
+        font-size: 30px;
+      }
+    }
+    .hm_flow__title {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 180%;
+      margin-top: -29px;
+      letter-spacing: 3px;
+      color: $txt-color;
+      @include sp {
+        font-size: 46px;
+      }
+    }
+  }
+  .hm_flow__content {
+    .hm_flow__container {
+      max-width: 871px;
+      padding: 0 15px;
+      margin: 0 auto;
+      .hm_flow__step {
+        display: flex;
+        gap: 41px;
+        margin-bottom: 65px;
+        @include sp {
+          margin-bottom: 20px;
+        }
+        .hm_flow__step-img {
+          background-color: $base-color;
+          border-radius: 50%;
+          width: 200px;
+          height: 200px;
+          aspect-ratio: 1 / 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 6px;
+          position: relative;
+          @include sp {
+            display: none;
+          }
+        }
+        .hm_flow__step-img::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          height: calc(100% + 80px);
+          border-left: 2px dashed rgba(68, 73, 73, 0.3);
+        }
+
+        .hm_flow__step-body {
+          .hm_flow__step-number {
+            font-family: $sub-font;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 140%;
+            letter-spacing: 1.5px;
+            color: $bg01;
+          }
+          .hm_flow__step-title {
+            font-family: $accent-font;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 120%;
+            letter-spacing: 3px;
+            color: $txt-color;
+            margin-bottom: 20px;
+          }
+          .hm_flow__step-desc {
+            font-family: $accent-font;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 180%;
+            letter-spacing: 1.6px;
+            margin-bottom: 21px;
+            color: $txt-color;
+            @include sp {
+              margin-bottom: 0;
+            }
+          }
+          .hm_flow__contact {
+            margin-bottom: 16px;
+            .hm_flow__contact-text {
+              font-family: $accent-font;
+              font-weight: 300;
+              font-size: 18px;
+              line-height: 180%;
+              letter-spacing: 1.5px;
+              color: $txt-color;
+            }
+            .hm_flow__contact-tel {
+              font-family: $accent-font;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 180%;
+              letter-spacing: 1.7px;
+              color: $txt-color;
+              .hm_flow__contact-icon {
+                margin-right: 7px;
+              }
+            }
+          }
+          .hm_flow__btn-link {
+            color: $base-color;
+            background-color: $btn-color;
+            border: 1px solid $btn-color;
+            border-radius: 30px;
+            display: block;
+            padding: 19px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 1px;
+            width: 76.7%;
+            transition: background-position 0.2s ease-in-out;
+            @include sp {
+              padding: 8px 0px;
+              width: 100%;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .hm_flow__step:last-child .hm_flow__step-img::after {
+        display: none;
+      }
+      .hm_flow__step:nth-child(2) .hm_flow__step-body {
+        margin-top: 25px;
+        @include sp {
+          margin-top: 0;
+        }
+      }
+      .hm_flow__step:nth-child(3) .hm_flow__step-body {
+        margin-top: 25px;
+        @include sp {
+          margin-top: 0;
+        }
+      }
+      .hm_flow__step:nth-child(4) .hm_flow__step-body {
+        margin-top: 19px;
+        @include sp {
+          margin-top: 0;
+        }
+      }
+      .hm_flow__step:nth-child(4) .hm_flow__step-img {
+        margin-top: -17px;
+      }
+    }
   }
 }

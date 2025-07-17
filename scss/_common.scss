@@ -95,7 +95,9 @@ header {
   z-index: 99;
   background-color: $base-color;
   transition: background-color 0.3s ease;
-
+  @include sp {
+    min-height: 50px;
+  }
   &.is-fixed {
     position: fixed;
     top: 0;
@@ -366,7 +368,7 @@ main {
 }
 
 .footer {
-  padding: 116px 0;
+  padding: 116px 0 0;
 
   &__contact {
     background: url("../imgs/home/ft-contact-bg.jpg") top left -48px;
