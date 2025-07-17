@@ -388,11 +388,6 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   width: 100%;
   z-index: 999;
 }
-@media (max-width: 1085px) {
-  .spmenu {
-    display: block;
-  }
-}
 
 .sp_group_lbl {
   background: #CBE1F2;
