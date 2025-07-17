@@ -132,6 +132,7 @@ header {
     }
 
     .spmenu {
+        // display: block !important;
       a {
         color: $txt-color !important;
         display: block;
@@ -189,11 +190,6 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   left: 0;
   width: 100%;
   z-index: 999;
-
-  @media (max-width: 1085px) {
-    display: block;
-
-  }
 }
 
 .sp_group_lbl {
