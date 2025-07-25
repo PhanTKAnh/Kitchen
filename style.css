@@ -3,7 +3,6 @@
 Theme Name: Theme-basic
 Author: FOIS
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @font-face {
   font-family: "DIN2014";
   src: url("./fonts/DIN2014-Bold.woff") format("woff");
@@ -26,6 +25,12 @@ Author: FOIS
   font-family: "Hiragino Kaku Gothic Pro";
   src: url("./fonts/繝偵Λ繧ュ繧吶ヮ譏取悃 STD W3.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HiraMinPro-W3";
+  src: url("../fonts/HiraMinPro-W3-AlphaNum.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 *,
@@ -318,7 +323,7 @@ header.is-fixed {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 header a {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
   color: #424242;
   font-weight: 700;
   font-size: 14px;
@@ -946,7 +951,7 @@ main {
   }
 }
 .hm_mainvisual .mv_inner .mv_cnt .mv_sub-ttl {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 100%;
@@ -964,14 +969,16 @@ main {
   }
 }
 .hm_mainvisual .mv_inner .mv_cnt .mv_ttl {
-  line-height: 100%;
-  margin-bottom: 44px;
-  letter-spacing: 1.5px;
-  font-size: 70px;
-  font-weight: 400;
+  font-family: "HiraMinPro-W3", serif;
 }
 .hm_mainvisual .mv_inner .mv_cnt .mv_ttl P {
   background-color: #FFFFFF;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0.08rem;
+  vertical-align: middle;
+  text-transform: uppercase;
   margin-bottom: 23px;
 }
 @media (max-width: 767px) {
@@ -1006,7 +1013,7 @@ main {
   width: 143px;
   height: 143px;
   background-color: #FFFFFF;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt .mv_features .mv_feature {
@@ -1107,7 +1114,7 @@ main {
 }
 .hm-problem__head {
   color: #ffffff;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
 }
 .hm-problem__catch {
   font-weight: 700;
@@ -1265,7 +1272,7 @@ main {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
   border-top: 2px dashed #FFFFFF;
   padding: 58px 0 0 0;
 }
@@ -1318,7 +1325,7 @@ main {
 }
 .easy-renovation__head {
   color: #444949;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
 }
 .easy-renovation__catch {
   font-weight: 700;
@@ -1512,7 +1519,7 @@ main {
   }
 }
 .section-step .step-card__title {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 140%;
@@ -1584,7 +1591,7 @@ main {
   }
 }
 .section-works__title {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "HiraMinPro-W3", serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 180%;

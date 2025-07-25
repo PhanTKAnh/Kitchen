@@ -53,13 +53,21 @@
         }
       }
       .mv_ttl {
-        line-height: 100%;
-        margin-bottom: 44px;
-        letter-spacing: 1.5px;
-        font-size: 70px;
-        font-weight: 400;
+             font-family: $title-font;
+        // line-height: 100%;
+        // margin-bottom: 44px;
+        // letter-spacing: 1.5px;
+        // font-size: 70px;
+        // font-weight: 400;
+
         P {
           background-color: $base-color;
+          font-weight: 700;
+font-size: 64px;
+line-height: 100%;
+letter-spacing: 0.08rem;
+vertical-align: middle;
+text-transform: uppercase;
           margin-bottom: 23px;
           @include sp {
             text-align: center;
