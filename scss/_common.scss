@@ -395,7 +395,7 @@ main {
     line-height: 1.8;
     letter-spacing: 0.8px;
     color: rgba(68, 73, 73, 0.2);
-    margin: 8px 0 -22px 9px;
+    margin: 8px 0 -42px 9px;
 
     @include sp {
       font-size: 20px;
@@ -405,6 +405,7 @@ main {
   }
 
   &__title {
+     font-family: $title-font;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.8;
@@ -418,7 +419,7 @@ main {
       display: block;
       width: 31%;
       border-bottom: 2px dashed #444949;
-      margin-top: -4px;
+      margin-top: 17px;
     }
 
     @include sp {
