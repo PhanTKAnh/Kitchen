@@ -25,6 +25,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'HiraMinPro-W3';
+  src: url('../fonts/HiraMinPro-W3-AlphaNum.woff') format('woff');
+ font-weight: 300;
+  font-style: normal;
+}
+
 $pc: 768px; // PC
 $sp: 767px; //スマートフォン
 $base-width: 1232px;
@@ -32,6 +39,7 @@ $txt-size: 1rem;
 $txt-size-sp: 0.75rem;
 $line-height: 2;
 $txt-font: 'Hiragino Kaku Gothic Pro', sans-serif;
+$title-font: 'HiraMinPro-W3', serif;
 $sub-font: 'DIN2014', 'Arial', 'Helvetica', sans-serif;
 $accent-font:'Hiragino Kaku Gothic Pro', sans-serif;
 $txt-color: #444949;
