@@ -95,7 +95,9 @@ header {
   z-index: 99;
   background-color: $base-color;
   transition: background-color 0.3s ease;
-
+  @include sp {
+    min-height: 50px;
+  }
   &.is-fixed {
     position: fixed;
     top: 0;
@@ -130,6 +132,7 @@ header {
     }
 
     .spmenu {
+        // display: block !important;
       a {
         color: $txt-color !important;
         display: block;
@@ -187,11 +190,6 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   left: 0;
   width: 100%;
   z-index: 999;
-
-  @media (max-width: 1085px) {
-    display: block;
-
-  }
 }
 
 .sp_group_lbl {
@@ -366,7 +364,7 @@ main {
 }
 
 .footer {
-  padding: 116px 0;
+  padding: 116px 0 0;
 
   &__contact {
     background: url("../imgs/home/ft-contact-bg.jpg") top left -48px;
