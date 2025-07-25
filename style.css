@@ -977,10 +977,13 @@ main {
   font-weight: 700;
   font-size: 64px;
   line-height: 100%;
-  letter-spacing: 0.08rem;
+  letter-spacing: 5px;
   vertical-align: middle;
   text-transform: uppercase;
-  margin-bottom: 23px;
+  padding-left: 15px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0px 0px 15px 0px;
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt .mv_ttl P {
@@ -997,6 +1000,7 @@ main {
 .hm_mainvisual .mv_inner .mv_cnt .mv_features {
   display: flex;
   gap: 15px;
+  margin-top: 40px;
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt .mv_features {
@@ -1772,7 +1776,7 @@ main {
 
 .hm_flow {
   background-color: #FFF3E5;
-  padding: 101px 0 68px;
+  padding: 94px 0 54px;
 }
 @media (max-width: 767px) {
   .hm_flow {
@@ -1793,7 +1797,7 @@ main {
   font-weight: 700;
   font-size: 40px;
   line-height: 180%;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   color: rgba(68, 73, 73, 0.2);
 }
 @media (max-width: 767px) {
@@ -1823,7 +1827,7 @@ main {
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step {
   display: flex;
   gap: 41px;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 @media (max-width: 767px) {
   .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step {
@@ -1865,13 +1869,13 @@ main {
   color: #FD9152;
 }
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-body .hm_flow__step-title {
-  font-family: "Hiragino Kaku Gothic Pro", sans-serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 120%;
   letter-spacing: 3px;
   color: #444949;
-  margin-bottom: 8px 0 15px 0;
+  margin-bottom: 20px;
 }
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-body .hm_flow__step-desc {
   font-family: "Hiragino Kaku Gothic Pro", sans-serif;
