@@ -28,7 +28,7 @@ Author: FOIS
   font-style: normal;
 }
 @font-face {
-  font-family: "HiraMinPro-W3";
+  font-family: "fot-tsukuardgothic-std";
   src: url("../fonts/HiraMinPro-W3-AlphaNum.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -328,7 +328,7 @@ header.is-fixed {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 header a {
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   color: #424242;
   font-weight: 700;
   font-size: 14px;
@@ -573,7 +573,7 @@ main {
   line-height: 1.8;
   letter-spacing: 0.8px;
   color: rgba(68, 73, 73, 0.2);
-  margin: 8px 0 -22px 9px;
+  margin: 8px 0 -42px 9px;
 }
 @media (max-width: 767px) {
   .footer__label {
@@ -583,6 +583,7 @@ main {
   }
 }
 .footer__title {
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.8;
@@ -596,7 +597,7 @@ main {
   display: block;
   width: 31%;
   border-bottom: 2px dashed #444949;
-  margin-top: -4px;
+  margin-top: 17px;
 }
 @media (max-width: 767px) {
   .footer__title {
@@ -951,7 +952,7 @@ main {
   }
 }
 .hm_mainvisual .mv_inner .mv_cnt .mv_sub-ttl {
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 100%;
@@ -969,7 +970,7 @@ main {
   }
 }
 .hm_mainvisual .mv_inner .mv_cnt .mv_ttl {
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
 }
 .hm_mainvisual .mv_inner .mv_cnt .mv_ttl P {
   background-color: #FFFFFF;
@@ -1013,7 +1014,7 @@ main {
   width: 143px;
   height: 143px;
   background-color: #FFFFFF;
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt .mv_features .mv_feature {
@@ -1114,14 +1115,14 @@ main {
 }
 .hm-problem__head {
   color: #ffffff;
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
 }
 .hm-problem__catch {
   font-weight: 700;
   font-size: 40px;
   line-height: 180%;
-  letter-spacing: 0.8px;
-  margin: 6px 0 -17px -11px;
+  letter-spacing: 0.08em;
+  margin: 6px 0 -17px 2px;
 }
 @media (max-width: 767px) {
   .hm-problem__catch {
@@ -1156,8 +1157,8 @@ main {
   max-width: 1062px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 48px auto 130px;
-  gap: 20px;
+  margin: 50px auto 130px;
+  gap: 17px;
   padding: 0 10px;
 }
 @media (max-width: 767px) {
@@ -1176,7 +1177,7 @@ main {
   align-items: flex-start;
   width: 100%;
   background: #ffffff;
-  padding: 25px 19px 72px 15px;
+  padding: 25px 19px 72px 19px;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
@@ -1272,13 +1273,8 @@ main {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-<<<<<<< HEAD
-  font-family: "HiraMinPro-W3", serif;
-  border-top: 2px dashed #FFFFFF;
-=======
-  font-family: "Noto Sans", sans-serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   border-top: 2px dashed #ffffff;
->>>>>>> c4f62ec687fe8aa68e8b6f390962eaf39bf18657
   padding: 58px 0 0 0;
 }
 @media (max-width: 767px) {
@@ -1305,6 +1301,7 @@ main {
   font-size: 56px;
   line-height: 180%;
   letter-spacing: 0.08em;
+  margin: -13px 0 11px 0;
 }
 @media (max-width: 767px) {
   .hm-problem__solution-title {
@@ -1331,14 +1328,14 @@ main {
 }
 .easy-renovation__head {
   color: #444949;
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
 }
 .easy-renovation__catch {
   font-weight: 700;
   font-size: 40px;
   line-height: 180%;
-  letter-spacing: 0.8px;
-  margin: 95px 0 -9px -13px;
+  letter-spacing: 0.08em;
+  margin: 95px 0 -9px 5px;
 }
 @media (max-width: 767px) {
   .easy-renovation__catch {
@@ -1429,7 +1426,7 @@ main {
 }
 
 .section-step {
-  padding: 80px 0 0px 0;
+  padding: 80px 0 2px 0;
   background-color: #FFF3E5;
 }
 @media (max-width: 767px) {
@@ -1525,12 +1522,12 @@ main {
   }
 }
 .section-step .step-card__title {
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 140%;
-  letter-spacing: 0;
-  margin: -8px 0 0 -4px;
+  letter-spacing: 0.08em;
+  margin: -15px 0 0 1px;
 }
 @media (max-width: 767px) {
   .section-step .step-card__title {
@@ -1543,7 +1540,7 @@ main {
   font-size: 20px;
   line-height: 180%;
   letter-spacing: 0.08em;
-  margin: 19px -4px 0 0;
+  margin: 25px -9px 0 4px;
 }
 @media (max-width: 767px) {
   .section-step .step-card__description {
@@ -1597,7 +1594,7 @@ main {
   }
 }
 .section-works__title {
-  font-family: "HiraMinPro-W3", serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 180%;
@@ -1611,7 +1608,7 @@ main {
 .section-works__case-list {
   display: flex;
   flex-direction: column;
-  gap: 66px;
+  gap: 60px;
 }
 @media (max-width: 767px) {
   .section-works__case-list {
@@ -1638,7 +1635,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 8px 0 0 0;
+  margin: 14px 0 0 0;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
@@ -1775,7 +1772,7 @@ main {
 
 .hm_flow {
   background-color: #FFF3E5;
-  padding: 101px 0 54px;
+  padding: 101px 0 68px;
 }
 @media (max-width: 767px) {
   .hm_flow {
@@ -1805,7 +1802,7 @@ main {
   }
 }
 .hm_flow .hm_flow__head .hm_flow__title {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 180%;
@@ -1826,7 +1823,7 @@ main {
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step {
   display: flex;
   gap: 41px;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
 }
 @media (max-width: 767px) {
   .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step {
@@ -1874,7 +1871,7 @@ main {
   line-height: 120%;
   letter-spacing: 3px;
   color: #444949;
-  margin-bottom: 20px;
+  margin-bottom: 8px 0 15px 0;
 }
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-body .hm_flow__step-desc {
   font-family: "Hiragino Kaku Gothic Pro", sans-serif;
@@ -1921,7 +1918,7 @@ main {
   padding: 19px 20px;
   text-align: center;
   text-decoration: none;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "fot-tsukuardgothic-std", serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
