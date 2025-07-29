@@ -75,6 +75,7 @@ a {
   background: transparent;
   cursor: pointer;
   outline: 0 none;
+  text-decoration: none;
 }
 
 html {
@@ -97,12 +98,12 @@ main {
 	}
 }
 .container{
-  max-width: 1470px;
+  max-width: 1130px;
   padding: 0 15px;
   margin: 0 auto;
 }
 .container-lg{
-  max-width: 1536px;
+  max-width: 1136px;
   padding: 0 48px;
   margin: 0 auto;
   @include sp {
