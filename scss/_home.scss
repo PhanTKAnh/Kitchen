@@ -3,9 +3,11 @@
   position: relative;
   background-color: #fff3e5;
   top: 82px;
+
   .mv_item {
     height: 750px;
     position: relative;
+
     .mv_item__bg {
       position: absolute;
       top: 0;
@@ -15,27 +17,29 @@
       object-fit: cover;
       border-bottom-left-radius: 90px;
       overflow: hidden;
+
       @include sp {
         border-bottom-left-radius: 0;
       }
     }
   }
+
   .mv_inner {
     position: absolute;
-    top: 50%;
+    top: 44.8%;
     transform: translateY(-50%);
     width: 100%;
     z-index: 1;
+
     .mv_cnt {
       color: $txt-color;
-      max-width: 46.2%;
-      position: relative;
-      left: 13%;
-      top: -40px;
+      margin: 0 27px;
+
       @include sp {
         max-width: 100%;
         left: 0;
       }
+
       .mv_sub-ttl {
         font-family: $title-font;
         font-weight: 700;
@@ -44,7 +48,8 @@
         letter-spacing: 3px;
         vertical-align: middle;
         text-transform: uppercase;
-        margin-bottom: 20px;
+           margin: -10px 0 22px 0;
+
         @include sp {
           font-size: 20px;
           margin-bottom: 17px;
@@ -52,43 +57,45 @@
           text-align: center;
         }
       }
-      .mv_ttl {
-             font-family: $title-font;
-        // line-height: 100%;
-        // margin-bottom: 44px;
-        // letter-spacing: 1.5px;
-        // font-size: 70px;
-        // font-weight: 400;
 
-        P {
+      .mv_ttl {
+        font-family: $title-font;
+        max-width: 650px;
+
+        p {
+
           background-color: $base-color;
           font-weight: 700;
-font-size: 64px;
-line-height: 100%;
-letter-spacing: 5px;
-vertical-align: middle;
-text-transform: uppercase;
-padding-left: 15px;
-padding-top: 6px;
-padding-bottom: 6px;
-margin: 0px 0px 15px 0px;
+          font-size: 64px;
+          line-height: 100%;
+          letter-spacing: 5px;
+          vertical-align: middle;
+          text-transform: uppercase;
+          padding-left: 15px;
+          padding-bottom: 11px;
+          margin: 18px 0;
+
           @include sp {
             text-align: center;
           }
         }
+
         @include sp {
           font-size: 30px;
           letter-spacing: -0.9px;
           margin-bottom: 13px;
         }
       }
+
       .mv_features {
         display: flex;
         gap: 15px;
         margin-top: 40px;
+
         @include sp {
           flex-direction: column;
         }
+
         .mv_feature {
           border-radius: 50%;
           border: 2px solid #ed652b;
@@ -101,18 +108,21 @@ margin: 0px 0px 15px 0px;
           height: 143px;
           background-color: $base-color;
           font-family: $title-font;
+
           @include sp {
             border-radius: 0;
             padding: 10px;
             width: 100%;
             height: 100px;
           }
+
           .mv_feature-img {
             width: 35px;
             height: auto;
             object-fit: contain;
             margin-bottom: 19px;
           }
+
           .mv_feature-text {
             font-weight: 700;
             font-size: 12px;
@@ -123,6 +133,7 @@ margin: 0px 0px 15px 0px;
             text-transform: uppercase;
             margin-bottom: 2px;
           }
+
           .mv_feature-heading {
             font-weight: 700;
             font-size: 22px;
@@ -134,54 +145,51 @@ margin: 0px 0px 15px 0px;
             color: #ed652b;
           }
         }
+
         .mv_feature:nth-child(2) .mv_feature-img {
           width: 30px;
           margin-bottom: 10px;
         }
+
         .mv_feature:nth-child(3) .mv_feature-img {
           width: 25px;
           margin-bottom: 14px;
         }
       }
+
       .mv_btn {
-        display: flex;
-        gap: 15px;
-        margin-top: 42px;
-        @include sp {
-          flex-direction: column;
-          gap: 8px;
-          margin-top: 13px;
-        }
-        a {
-          color: $base-color;
-          border: 1px solid $btn-color;
-          border-radius: 30px;
-          display: block;
-          padding: 19px 20px;
-          text-align: center;
-          text-decoration: none;
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 100%;
-          letter-spacing: 1px;
-          width: 71%;
-          transition: background-position 0.2s ease-in-out;
-          &:active,
-          &.is-active {
-            background: $btn-color;
-            border: 1px solid transparent;
-          }
-          &:hover {
-            background: $btn-color;
-            border: 1px solid transparent;
-          }
-          @include sp {
-            padding: 8px 0px;
-            width: 100%;
-            font-size: 14px;
-          }
-        }
+  margin: 37px 0 0 3px;
+
+  a {
+    width: 461px;
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+    padding: 18px 0 20px 3px;
+    border-radius: 30px;
+    font-family: $title-font;
+    background: $btn-color;
+    border: 1px solid $btn-color;
+        gap: 10px;
+    img{
+margin: 0 0 0 0 ;
+    }
+      &:hover {
+        background: #FD915233;
+        color: #FFFFFF;;
       }
+    @include sp {
+      padding: 8px 0px;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}
+
     }
   }
 }
@@ -189,7 +197,7 @@ margin: 0px 0px 15px 0px;
 // problem
 .hm-problem {
   position: relative;
-  padding:92px 0 0 0;
+  padding: 92px 0 15px 0;
   background: #fd9152;
   text-align: center;
   z-index: 2;
@@ -197,6 +205,7 @@ margin: 0px 0px 15px 0px;
   @include sp {
     padding: 12px 0 41px;
   }
+  
 
   &__head {
     color: #ffffff;
@@ -240,12 +249,10 @@ margin: 0px 0px 15px 0px;
   }
 
   .hm-problem__cards {
-    max-width: 1062px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin:50px auto 130px;
+    margin:50px 30px 130px;
     gap: 17px;
-    padding: 0 10px;
 
     @include sp {
       grid-template-columns: repeat(1, 1fr);
@@ -256,7 +263,7 @@ margin: 0px 0px 15px 0px;
   }
 
   .problem-card {
-text-align: left;
+    text-align: left;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -268,7 +275,7 @@ text-align: left;
 
     @include sp {
       padding: 16px;
-        text-align: center;
+      text-align: center;
 
     }
 
@@ -296,7 +303,7 @@ text-align: left;
     }
 
     &__img {
-      
+
       max-width: 53.78432846069336px;
       max-height: 44px;
 
@@ -370,6 +377,7 @@ text-align: left;
     font-family: $title-font;
     border-top: 2px dashed #ffffff;
     padding: 58px 0 0 0;
+    
 
     @include sp {
       padding: 32px 16px 0;
@@ -394,7 +402,7 @@ text-align: left;
       font-size: 56px;
       line-height: 180%;
       letter-spacing: 0.08em;
-      margin: -13px 0 11px 0;
+      margin: -13px 0 0 0;
 
       @include sp {
         font-size: 32px;
@@ -414,6 +422,7 @@ text-align: left;
   background-repeat: no-repeat;
   background-size: 109% auto;
   object-fit: cover;
+  
 
   @include sp {
     padding: 33px 0 41px;
@@ -429,8 +438,8 @@ text-align: left;
     font-weight: 700;
     font-size: 40px;
     line-height: 180%;
-    letter-spacing:0.08em;
-    margin: 95px 0 -9px 5px;
+    letter-spacing: 0.08em;
+    margin: 90px 0 -9px 5px;
 
     @include sp {
       font-size: 20px;
@@ -477,6 +486,7 @@ text-align: left;
       line-height: 180%;
       letter-spacing: 0.08em;
       text-align: center;
+      // margin: -5px 0 0 0;
 
       @include sp {
         font-size: 16px;
@@ -484,45 +494,55 @@ text-align: left;
       }
 
       span {
-        background: #FD915233;
-        padding: 10px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 180%;
-        letter-spacing: 0.08em;
-        text-align: center;
-
-        @include sp {
-          font-size: 16px;
-          padding: 6px 8px;
-          display: inline-block;
-        }
-      }
-    }
-  }
+  position: relative; 
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 180%;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 10px 5px; 
+  z-index: 1; 
 
   &::after {
-    content: "";
+  content: "";
     position: absolute;
+    top: -5px;
     left: 0;
-    top: -106px;
-    width: 100%;
-    height: 196px;
-    background-image: url("../imgs/home/Rectangle 1720.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center bottom;
-    z-index: 1;
+    right: 0;
+    bottom: 0;
+    background: rgba(253, 145, 82, 0.2);
+    border-radius: 4px;
+    z-index: -1;
+    height: 34px;
+  }
 
-    @include sp {
-     display: none;
+  @include sp {
+    font-size: 16px;
+    padding: 6px 8px;
+    display: inline-block;
+  }
+}
+
     }
   }
+
+}
+  .easy-renovation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 86px;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 86px solid #fd9152;
+  z-index: 1;
 }
 
 // 
 .section-step {
-  padding:80px 0 2px  0;
+  padding: 80px 0 2px 0;
   background-color: #FFF3E5;
 
   @include sp {
@@ -619,11 +639,11 @@ text-align: left;
 
     &__title {
       font-family: $title-font;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 140%;
-    letter-spacing: 0.08em;
-    margin: -15px 0 0 1px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 140%;
+      letter-spacing: 0.08em;
+      margin: -15px 0 0 1px;
 
       @include sp {
         font-size: 20px;
@@ -632,11 +652,11 @@ text-align: left;
     }
 
     &__description {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 180%;
-    letter-spacing: 0.08em;
-    margin: 25px -9px 0 4px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 180%;
+      letter-spacing: 0.08em;
+      margin: 25px -9px 0 4px;
 
       @include sp {
         font-size: 14px;
@@ -705,7 +725,7 @@ text-align: left;
   &__case-list {
     display: flex;
     flex-direction: column;
-    gap:60px;
+    gap: 60px;
 
     @include sp {
       gap: 40px;
@@ -713,10 +733,9 @@ text-align: left;
   }
 
   .case-item {
-    max-width: 1041px;
-    margin: 0 auto;
     display: flex;
     gap: 40px;
+    padding: 0 28px;
 
     @include sp {
       flex-direction: column;
@@ -888,16 +907,20 @@ text-align: left;
 // Flow Section
 .hm_flow {
   background-color: $bg02;
-  padding: 94px 0 54px;
+  padding: 94px 0 64px;
+
   @include sp {
     padding: 50px 0;
   }
+
   .hm_flow__head {
     text-align: center;
     margin-bottom: 43px;
+
     @include sp {
       margin-bottom: 20px;
     }
+
     .hm_flow__catch {
       font-family: $sub-font;
       font-weight: 700;
@@ -905,10 +928,12 @@ text-align: left;
       line-height: 180%;
       letter-spacing: 5px;
       color: rgba(68, 73, 73, 0.2);
+
       @include sp {
         font-size: 30px;
       }
     }
+
     .hm_flow__title {
       font-family: $title-font;
       font-weight: 700;
@@ -917,23 +942,28 @@ text-align: left;
       margin-top: -29px;
       letter-spacing: 3px;
       color: $txt-color;
+
       @include sp {
         font-size: 46px;
       }
     }
   }
+
   .hm_flow__content {
     .hm_flow__container {
       max-width: 871px;
       padding: 0 15px;
       margin: 0 auto;
+
       .hm_flow__step {
         display: flex;
         gap: 41px;
-        margin-bottom: 65px;
+        margin-bottom: 62px;
+
         @include sp {
           margin-bottom: 20px;
         }
+
         .hm_flow__step-img {
           background-color: $base-color;
           border-radius: 50%;
@@ -945,10 +975,12 @@ text-align: left;
           justify-content: center;
           margin-top: 6px;
           position: relative;
+
           @include sp {
             display: none;
           }
         }
+
         .hm_flow__step-img::after {
           content: "";
           position: absolute;
@@ -968,6 +1000,7 @@ text-align: left;
             letter-spacing: 1.5px;
             color: $bg01;
           }
+
           .hm_flow__step-title {
             font-family: $title-font;
             font-weight: 700;
@@ -977,20 +1010,24 @@ text-align: left;
             color: $txt-color;
             margin-bottom: 20px;
           }
+
           .hm_flow__step-desc {
             font-family: $accent-font;
             font-weight: 300;
             font-size: 20px;
             line-height: 180%;
-            letter-spacing: 1.6px;
-            margin-bottom: 21px;
+            letter-spacing: 0.08em;
+               margin: 26px 0 16px 0;
             color: $txt-color;
+
             @include sp {
               margin-bottom: 0;
             }
           }
+
           .hm_flow__contact {
             margin-bottom: 16px;
+
             .hm_flow__contact-text {
               font-family: $accent-font;
               font-weight: 300;
@@ -999,18 +1036,22 @@ text-align: left;
               letter-spacing: 1.5px;
               color: $txt-color;
             }
+
             .hm_flow__contact-tel {
               font-family: $accent-font;
               font-weight: 600;
-font-size: 24px;
+              font-size: 28px;
               line-height: 180%;
-              letter-spacing: 1.7px;
+              letter-spacing: 0.08em;
               color: $txt-color;
+                  margin: 3px 0 -9px 0;
+
               .hm_flow__contact-icon {
                 margin-right: 7px;
               }
             }
           }
+
           .hm_flow__btn-link {
             color: $base-color;
             background-color: $btn-color;
@@ -1024,38 +1065,51 @@ font-size: 24px;
             font-weight: 700;
             font-size: 20px;
             line-height: 100%;
-            letter-spacing: 1px;
+            letter-spacing: 0.08em;
             width: 76.7%;
             transition: background-position 0.2s ease-in-out;
+
             @include sp {
               padding: 8px 0px;
               width: 100%;
               font-size: 14px;
             }
+                  &:hover {
+        background: #FD915233;
+        color: #FFFFFF;;
+      }
           }
         }
       }
+
       .hm_flow__step:last-child .hm_flow__step-img::after {
         display: none;
       }
+
       .hm_flow__step:nth-child(2) .hm_flow__step-body {
         margin-top: 25px;
+
         @include sp {
           margin-top: 0;
         }
       }
+
       .hm_flow__step:nth-child(3) .hm_flow__step-body {
         margin-top: 25px;
+
         @include sp {
           margin-top: 0;
         }
       }
+
       .hm_flow__step:nth-child(4) .hm_flow__step-body {
         margin-top: 19px;
+
         @include sp {
           margin-top: 0;
         }
       }
+
       .hm_flow__step:nth-child(4) .hm_flow__step-img {
         margin-top: -17px;
       }
