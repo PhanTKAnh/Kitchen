@@ -95,9 +95,11 @@ header {
   z-index: 99;
   background-color: $base-color;
   transition: background-color 0.3s ease;
+
   @include sp {
     min-height: 50px;
   }
+
   &.is-fixed {
     position: fixed;
     top: 0;
@@ -132,11 +134,40 @@ header {
     }
 
     .spmenu {
-        // display: block !important;
+
+      // display: block !important;
       a {
         color: $txt-color !important;
         display: block;
         padding: 16px 20px 18px;
+      }
+
+      li {
+        &:last-child a {
+          background: $btn-color;
+          border: 1px solid $btn-color;
+          ;
+          color: #FDF5ED !important;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0.08em;
+          padding: 13px 21px;
+          position: relative;
+          border-radius: 30px;
+          margin: 7px 0;
+
+          img {
+            margin: -5px 0 0 0;
+
+          }
+
+          &:hover {
+            background: #FD915233;
+            color: #FFFFFF;
+            ;
+          }
+        }
       }
 
       li {
@@ -186,7 +217,7 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   height: calc(100vh - 60px);
   position: absolute;
   overflow: auto;
-  top: 60px;
+  top: 50px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -204,7 +235,8 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include sp{
+
+  @include sp {
     padding: 0 16px;
   }
 }
@@ -298,7 +330,8 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   li {
     &:last-child a {
       background: $btn-color;
-      border: 1px solid $btn-color;;
+      border: 1px solid $btn-color;
+      ;
       color: #FDF5ED;
       font-weight: 700;
       font-size: 16px;
@@ -309,59 +342,60 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
       border-radius: 30px;
 
       img {
-            margin: -5px 0 0 0;
-            
+        margin: -5px 0 0 0;
+
       }
 
       &:hover {
         background: #FD915233;
-        color: #FFFFFF;;
+        color: #FFFFFF;
+        ;
       }
     }
   }
 
-a {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 150%;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  padding: 6px 2.7px 11px;
-  position: relative;
-  white-space: nowrap;
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #FD9152;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-
-  &:hover {
-    color: #FD9152;
+  a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    padding: 6px 2.7px 11px;
+    position: relative;
+    white-space: nowrap;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
 
     &::after {
-      transform: scaleX(1);
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #FD9152;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: #FD9152;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &.active {
+      color: #FD9152;
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
-
-  &.active {
-    color: #FD9152;
-
-    &::after {
-      transform: scaleX(1);
-    }
-  }
-}
 
 
 }
@@ -406,9 +440,9 @@ main {
 }
 
 .footer {
-  padding:124px 0 0;
+  padding: 124px 0 0;
 
-  &__contact {
+ .footer__contact {
     background: url("../imgs/home/ft-contact-bg.jpg") top left -48px;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -418,12 +452,12 @@ main {
     max-width: 1041px;
     padding: 0 0 44px 0;
 
-    &-inner {
+    .footer__contact-inner {
       position: relative;
     }
   }
 
-  &__header {
+  .footer__header {
     padding: 61px 50px 0 68px;
 
     @include sp {
@@ -431,7 +465,7 @@ main {
     }
   }
 
-  &__label {
+  .footer__label {
     font-weight: 700;
     font-size: 40px;
     line-height: 1.8;
@@ -446,8 +480,8 @@ main {
     }
   }
 
-  &__title {
-     font-family: $title-font;
+  .footer__title {
+    font-family: $title-font;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.8;
@@ -483,7 +517,7 @@ main {
     }
   }
 
-  &__text {
+ .footer__text {
     max-width: 567px;
     font-weight: 300;
     font-size: 20px;
@@ -496,7 +530,7 @@ main {
     }
   }
 
-  &__info {
+  .footer__info {
     display: flex;
     padding: 20px 80px;
     gap: 76px;
@@ -508,8 +542,8 @@ main {
     }
   }
 
-  &__phone {
-    &-label {
+  .footer__phone {
+   .footer__phone-label {
       font-weight: 300;
       font-size: 18px;
       line-height: 180%;
@@ -517,7 +551,7 @@ main {
       color: #444949;
     }
 
-    &-number {
+    .footer__phone-number {
       font-family: $txt-font;
       font-weight: 600;
       font-size: 28px;
@@ -543,10 +577,10 @@ main {
 
   }
 
-  &__btn {
+  .footer__btn {
     margin: 8px 0 0 0;
 
-    &-link {
+     .footer__btn-link {
       font-family: $title-font;
       width: 461px;
       height: 60px;
@@ -560,25 +594,28 @@ main {
       font-weight: 700;
       letter-spacing: 0.08em;
       font-size: 20px;
+
       &:hover {
         background: #FD915233;
-        color: #FFFFFF;;
+        color: #FFFFFF;
+        ;
       }
 
       @include sp {
         width: 100%;
         padding: 8px;
         font-size: 14px;
+        justify-content: center;
       }
     }
 
-    &-icon {
+     .footer__btn-icon {
       margin-right: 10px;
 
     }
   }
 
-  &__copyright {
+   .footer__copyright {
     background: #424242;
     text-align: center;
     margin-top: 30px;
@@ -589,15 +626,14 @@ main {
 
   // Responsive
   @include sp {
-    padding-bottom: 0;
+    padding: 0;
 
-    &__contact {
-      background: url("../imgs/home/ft-contact-bg.jpg") no-repeat top right;
-      background-size: auto 100%;
+     .footer__contact {
+      background-size: auto 105%;
       border-radius: 10px;
-      margin: -57px 20px 0;
+      margin: 20px 10px;
 
-      &-inner {
+      .footer-inner {
         a {
           padding: 34px 18px 46px;
 
