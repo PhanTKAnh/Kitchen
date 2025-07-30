@@ -4,6 +4,10 @@
   background-color: #fff3e5;
   top: 82px;
 
+  @include sp {
+    top: 0;
+  }
+
   .mv_item {
     height: 750px;
     position: relative;
@@ -20,8 +24,10 @@
 
       @include sp {
         border-bottom-left-radius: 0;
+        height: 100%;
       }
     }
+
   }
 
   .mv_inner {
@@ -31,13 +37,17 @@
     width: 100%;
     z-index: 1;
 
+    @include sp {
+      top: 52.8%;
+    }
+
     .mv_cnt {
       color: $txt-color;
-      margin: 0 27px;
 
       @include sp {
         max-width: 100%;
         left: 0;
+        margin: 0;
       }
 
       .mv_sub-ttl {
@@ -48,7 +58,7 @@
         letter-spacing: 3px;
         vertical-align: middle;
         text-transform: uppercase;
-           margin: -10px 0 22px 0;
+        margin: -10px 0 22px 0;
 
         @include sp {
           font-size: 20px;
@@ -61,6 +71,13 @@
       .mv_ttl {
         font-family: $title-font;
         max-width: 650px;
+
+        @include sp {
+          font-size: 30px;
+          letter-spacing: -0.9px;
+          margin-bottom: 13px;
+          max-width: 100%;
+        }
 
         p {
 
@@ -76,6 +93,8 @@
           margin: 18px 0;
 
           @include sp {
+            font-size: 32px;
+            padding: 5px 0 10px 0;
             text-align: center;
           }
         }
@@ -120,7 +139,7 @@
             width: 35px;
             height: auto;
             object-fit: contain;
-            margin-bottom: 19px;
+            margin: 5px;
           }
 
           .mv_feature-text {
@@ -158,37 +177,41 @@
       }
 
       .mv_btn {
-  margin: 37px 0 0 3px;
+        margin: 37px 0 0 3px;
 
-  a {
-    width: 461px;
-    display: flex;
-    align-items: center;        
-    justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0.08em;
-    padding: 18px 0 20px 3px;
-    border-radius: 30px;
-    font-family: $title-font;
-    background: $btn-color;
-    border: 1px solid $btn-color;
-        gap: 10px;
-    img{
-margin: 0 0 0 0 ;
-    }
-      &:hover {
-        background: #FD915233;
-        color: #FFFFFF;;
+        a {
+          width: 461px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0.08em;
+          padding: 18px 0 20px 3px;
+          border-radius: 30px;
+          font-family: $title-font;
+          background: $btn-color;
+          border: 1px solid $btn-color;
+          gap: 10px;
+
+          img {
+            margin: 0 0 0 0;
+          }
+
+          &:hover {
+            background: #FD915233;
+            color: #FFFFFF;
+            ;
+          }
+
+          @include sp {
+            padding: 15px 0px;
+            width: 100%;
+            font-size: 14px;
+          }
+        }
       }
-    @include sp {
-      padding: 8px 0px;
-      width: 100%;
-      font-size: 14px;
-    }
-  }
-}
 
     }
   }
@@ -203,16 +226,16 @@ margin: 0 0 0 0 ;
   z-index: 2;
 
   @include sp {
-    padding: 12px 0 41px;
+    padding: 12px 0;
   }
-  
 
-  &__head {
+
+  .hm-problem__head {
     color: #ffffff;
     font-family: $title-font;
   }
 
-  &__catch {
+  .hm-problem__catch {
     font-weight: 700;
     font-size: 40px;
     line-height: 180%;
@@ -220,12 +243,12 @@ margin: 0 0 0 0 ;
     margin: 6px 0 -17px 2px;
 
     @include sp {
-      font-size: 12px;
-      margin: 12px 0 7px 0;
+      font-size: 20px;
+      margin: 12px 0 0 0;
     }
   }
 
-  &__title {
+  .hm-problem__title {
     font-weight: 700;
     font-style: normal;
     font-size: 48px;
@@ -251,12 +274,12 @@ margin: 0 0 0 0 ;
   .hm-problem__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin:50px 30px 130px;
+    margin: 50px 0 130px;
     gap: 17px;
 
     @include sp {
       grid-template-columns: repeat(1, 1fr);
-      margin: 24px auto 0;
+      margin: 24px auto;
       gap: 16px;
       justify-items: center;
     }
@@ -291,10 +314,7 @@ margin: 0 0 0 0 ;
       background: url("../imgs/home/Bubble Point.svg") no-repeat center/contain;
 
       @include sp {
-        top: auto;
-        bottom: 8px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: none;
       }
     }
 
@@ -302,7 +322,7 @@ margin: 0 0 0 0 ;
       padding: 12px 20px;
     }
 
-    &__img {
+    .problem-card__img {
 
       max-width: 53.78432846069336px;
       max-height: 44px;
@@ -319,7 +339,7 @@ margin: 0 0 0 0 ;
       }
     }
 
-    &__avatar {
+    .problem-card__avatar {
       background: #ffffff;
       position: absolute;
       border: 2px solid#ED652B;
@@ -342,7 +362,7 @@ margin: 0 0 0 0 ;
       }
     }
 
-    &__text {
+    .problem-card__text {
       p {
         margin: 16px 0 0 0;
         font-weight: 300;
@@ -369,7 +389,7 @@ margin: 0 0 0 0 ;
     }
   }
 
-  &__solution {
+  .hm-problem__solution {
     color: #ffffff;
     position: relative;
     max-width: 800px;
@@ -377,13 +397,14 @@ margin: 0 0 0 0 ;
     font-family: $title-font;
     border-top: 2px dashed #ffffff;
     padding: 58px 0 0 0;
-    
+
 
     @include sp {
-      padding: 32px 16px 0;
+      padding: 0 0;
+      text-align: center;
     }
 
-    &-text {
+    .hm-problem__solution-text {
       font-weight: 700;
       font-size: 40px;
       line-height: 180%;
@@ -393,11 +414,11 @@ margin: 0 0 0 0 ;
         font-size: 20px;
         line-height: 160%;
         margin: 24px 0 8px 0;
-        text-align: left;
+
       }
     }
 
-    &-title {
+    .hm-problem__solution-title {
       font-weight: 700;
       font-size: 56px;
       line-height: 180%;
@@ -407,7 +428,7 @@ margin: 0 0 0 0 ;
       @include sp {
         font-size: 32px;
         line-height: 150%;
-        text-align: left;
+
       }
     }
   }
@@ -419,22 +440,21 @@ margin: 0 0 0 0 ;
   padding: 92px 0 81px 0;
   text-align: center;
   background: url(../imgs/home/bg-easy.jpg) top left -48px;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-size: 109% auto;
   object-fit: cover;
-  
+
 
   @include sp {
-    padding: 33px 0 41px;
     background-size: auto;
   }
 
-  &__head {
+  .easy-renovation__head {
     color: #444949;
     font-family: $title-font;
   }
 
-  &__catch {
+  .easy-renovation__catch {
     font-weight: 700;
     font-size: 40px;
     line-height: 180%;
@@ -447,7 +467,7 @@ margin: 0 0 0 0 ;
     }
   }
 
-  &__title {
+  .easy-renovation__title {
     font-weight: 700;
     font-style: normal;
     font-size: 56px;
@@ -457,6 +477,7 @@ margin: 0 0 0 0 ;
     @include sp {
       font-size: 28px;
       line-height: 1.6;
+      letter-spacing: 0
     }
 
     span {
@@ -472,12 +493,12 @@ margin: 0 0 0 0 ;
     }
   }
 
-  &__content {
+  .easy-renovation__content {
     margin: 44px 0 20px 0;
     font-family: $txt-font;
 
     @include sp {
-      margin: 24px 16px;
+      margin: 24px 0;
     }
 
     p {
@@ -494,44 +515,45 @@ margin: 0 0 0 0 ;
       }
 
       span {
-  position: relative; 
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 180%;
-  letter-spacing: 0.08em;
-  text-align: center;
-  padding: 10px 5px; 
-  z-index: 1; 
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 180%;
+        letter-spacing: 0.08em;
+        text-align: center;
+        padding: 10px 5px;
+        z-index: 1;
 
-  &::after {
-  content: "";
-    position: absolute;
-    top: -5px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(253, 145, 82, 0.2);
-    border-radius: 4px;
-    z-index: -1;
-    height: 34px;
-  }
+        &::after {
+          content: "";
+          position: absolute;
+          top: -5px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(253, 145, 82, 0.2);
+          border-radius: 4px;
+          z-index: -1;
+          height: 34px;
+        }
 
-  @include sp {
-    font-size: 16px;
-    padding: 6px 8px;
-    display: inline-block;
-  }
-}
+        @include sp {
+          font-size: 16px;
+          padding: 0 8px;
+          display: inline-block;
+        }
+      }
 
     }
   }
 
 }
-  .easy-renovation::after {
+
+.easy-renovation::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1px;
   width: 100%;
   height: 86px;
   border-left: 50vw solid transparent;
@@ -563,7 +585,7 @@ margin: 0 0 0 0 ;
       margin: 24px 0 48px;
     }
 
-    &__image {
+    .step-card__image {
       position: relative;
       text-align: center;
 
@@ -622,22 +644,22 @@ margin: 0 0 0 0 ;
         @include sp {
           width: 100%;
           height: auto;
+          object-fit: none;
         }
       }
     }
 
-    &__content {
+    .step-card__content {
       flex: 1;
       max-width: 542px;
 
       @include sp {
         order: 2;
-        max-width: 90%;
         text-align: left;
       }
     }
 
-    &__title {
+    .step-card__title {
       font-family: $title-font;
       font-weight: 700;
       font-size: 36px;
@@ -651,7 +673,7 @@ margin: 0 0 0 0 ;
       }
     }
 
-    &__description {
+    .step-card__description {
       font-weight: 300;
       font-size: 20px;
       line-height: 180%;
@@ -684,10 +706,10 @@ margin: 0 0 0 0 ;
   background: #FFF3E533;
 
   @include sp {
-    padding: 40px 0 80px;
+    padding: 40px 0;
   }
 
-  &__header {
+  .section-works__header {
     margin-bottom: 40px;
 
     @include sp {
@@ -695,7 +717,7 @@ margin: 0 0 0 0 ;
     }
   }
 
-  &__label {
+  .section-works__label {
     font-family: $sub-font;
     font-weight: 700;
     font-size: 40px;
@@ -705,12 +727,12 @@ margin: 0 0 0 0 ;
     margin: 8px 0 -21px 0;
 
     @include sp {
-      font-size: 16px;
-      margin: 8px 0 0;
+      font-size: 20px;
+      margin: 0;
     }
   }
 
-  &__title {
+  .section-works__title {
     font-family: $title-font;
     font-weight: 700;
     font-size: 56px;
@@ -722,7 +744,7 @@ margin: 0 0 0 0 ;
     }
   }
 
-  &__case-list {
+  .section-works__case-list {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -735,15 +757,14 @@ margin: 0 0 0 0 ;
   .case-item {
     display: flex;
     gap: 40px;
-    padding: 0 28px;
 
     @include sp {
       flex-direction: column;
       gap: 24px;
-      padding: 0 16px;
+      padding: 0;
     }
 
-    &__name {
+    .case-item__name {
       background: #44494933;
       height: 60px;
       padding: 0 24px;
@@ -756,6 +777,7 @@ margin: 0 0 0 0 ;
       @include sp {
         height: 48px;
         font-size: 20px;
+        margin: 0;
       }
 
       span {
@@ -773,13 +795,13 @@ margin: 0 0 0 0 ;
       }
     }
 
-    &__compare {
+    .case-item__compare {
       display: flex;
       gap: 18px;
       margin: 21px 0 0 0;
     }
 
-    &__image {
+    .case-item__image {
       width: 219px;
       height: 343px;
 
@@ -804,51 +826,49 @@ margin: 0 0 0 0 ;
       letter-spacing: 0.08em;
     }
 
-    .case-item {
-      &__labels {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 41px;
-        margin-top: 12px;
+    .case-item__labels {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 41px;
+      margin-top: 12px;
+    }
+
+    .case-item__label {
+      font-family: $sub-font;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 180%;
+      letter-spacing: 0.08em;
+
+      @include sp {
+        font-size: 14px;
       }
 
-      &__label {
-        font-family: $sub-font;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 180%;
-        letter-spacing: 0.08em;
-
-        @include sp {
-          font-size: 14px;
-        }
-
-        &--before {
-          color: #44494966;
-        }
-
-        &--after {
-          color: #444949;
-        }
+      .case-item__label--before {
+        color: #44494966;
       }
 
-      &__label-icon {
-        width: 67px;
-        height: 21px;
-        background: url('../imgs/home/icon-increase.png') no-repeat center;
-        background-size: contain;
+      .case-item__label--after {
+        color: #444949;
       }
     }
 
-    &__descriptions {
+    .case-item__label-icon {
+      width: 67px;
+      height: 21px;
+      background: url('../imgs/home/icon-increase.png') no-repeat center;
+      background-size: contain;
+    }
+
+    .case-item__descriptions {
       text-align: start;
       position: relative;
 
     }
 
-    &__summary {
-      border: 2px solid rgba(68, 73, 73, 0.3019607843);
+    .case-item__summary {
+      border: 2px solid rgba(68, 73, 73, 0.3);
       border-radius: 20px;
       margin: 9px 0 49px 0;
       padding: 32px 38px 26px 36px;
@@ -858,24 +878,40 @@ margin: 0 0 0 0 ;
         font-size: 18px;
         line-height: 180%;
         letter-spacing: 0.08em;
+
+        @include sp {
+          font-size: 14px;
+          line-height: 170%;
+          letter-spacing: 0.05em;
+        }
+      }
+
+      @include sp {
+        padding: 20px 20px 24px 20px;
+        border-radius: 16px;
+        margin: 12px 0 32px 0;
       }
     }
 
     .case-item__arrow {
+      position: absolute;
       top: 45%;
       left: 48%;
-      position: absolute;
       width: 24px;
       height: 24px;
       background: url("../imgs/home/icon-arrow-up.png") no-repeat center;
       background-size: 24px;
 
       @include sp {
-        top: 44%;
+        top: 47%;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
       }
     }
 
-    &__solution {
+
+    .case-item__solution {
       border: 2px solid #FD9152;
       border-radius: 20px;
       padding: 24px 0 30px 0;
@@ -898,8 +934,26 @@ margin: 0 0 0 0 ;
           background: url("../imgs/home/check-broken.png") no-repeat center;
           background-size: contain;
         }
+
+        @include sp {
+          font-size: 14px;
+          line-height: 170%;
+          margin: 12px 24px 0 40px;
+
+          &::after {
+            left: -28px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      @include sp {
+        padding: 10px 0;
+        border-radius: 16px;
       }
     }
+
 
   }
 }
@@ -930,7 +984,7 @@ margin: 0 0 0 0 ;
       color: rgba(68, 73, 73, 0.2);
 
       @include sp {
-        font-size: 30px;
+        font-size: 20px;
       }
     }
 
@@ -944,7 +998,8 @@ margin: 0 0 0 0 ;
       color: $txt-color;
 
       @include sp {
-        font-size: 46px;
+        font-size: 28px;
+        margin-top: -15px
       }
     }
   }
@@ -961,7 +1016,11 @@ margin: 0 0 0 0 ;
         margin-bottom: 62px;
 
         @include sp {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
           margin-bottom: 20px;
+          gap: 20px;
         }
 
         .hm_flow__step-img {
@@ -977,7 +1036,12 @@ margin: 0 0 0 0 ;
           position: relative;
 
           @include sp {
-            display: none;
+            width: 100px;
+            height: 100px;
+            img{
+               width: 52px;
+        height: 53px;
+            }
           }
         }
 
@@ -989,9 +1053,17 @@ margin: 0 0 0 0 ;
           transform: translateX(-50%);
           height: calc(100% + 80px);
           border-left: 2px dashed rgba(68, 73, 73, 0.3);
+
+          @include sp {
+            display: none;
+          }
         }
 
         .hm_flow__step-body {
+          @include sp {
+            padding: 0 10px;
+          }
+
           .hm_flow__step-number {
             font-family: $sub-font;
             font-weight: 700;
@@ -999,6 +1071,10 @@ margin: 0 0 0 0 ;
             line-height: 140%;
             letter-spacing: 1.5px;
             color: $bg01;
+
+            @include sp {
+              font-size: 20px;
+            }
           }
 
           .hm_flow__step-title {
@@ -1009,6 +1085,11 @@ margin: 0 0 0 0 ;
             letter-spacing: 3px;
             color: $txt-color;
             margin-bottom: 20px;
+
+            @include sp {
+              font-size: 24px;
+              margin-bottom: 15px;
+            }
           }
 
           .hm_flow__step-desc {
@@ -1017,11 +1098,12 @@ margin: 0 0 0 0 ;
             font-size: 20px;
             line-height: 180%;
             letter-spacing: 0.08em;
-               margin: 26px 0 16px 0;
+            margin: 26px 0 16px 0;
             color: $txt-color;
 
             @include sp {
-              margin-bottom: 0;
+              font-size: 16px;
+              margin: 10px 0;
             }
           }
 
@@ -1035,6 +1117,10 @@ margin: 0 0 0 0 ;
               line-height: 180%;
               letter-spacing: 1.5px;
               color: $txt-color;
+
+              @include sp {
+                font-size: 16px;
+              }
             }
 
             .hm_flow__contact-tel {
@@ -1044,7 +1130,11 @@ margin: 0 0 0 0 ;
               line-height: 180%;
               letter-spacing: 0.08em;
               color: $txt-color;
-                  margin: 3px 0 -9px 0;
+              margin: 3px 0 -9px 0;
+
+              @include sp {
+                font-size: 20px;
+              }
 
               .hm_flow__contact-icon {
                 margin-right: 7px;
@@ -1070,14 +1160,15 @@ margin: 0 0 0 0 ;
             transition: background-position 0.2s ease-in-out;
 
             @include sp {
-              padding: 8px 0px;
+              padding: 16px 10px;
               width: 100%;
               font-size: 14px;
             }
-                  &:hover {
-        background: #FD915233;
-        color: #FFFFFF;;
-      }
+
+            &:hover {
+              background: #FD915233;
+              color: #FFFFFF;
+            }
           }
         }
       }
@@ -1086,24 +1177,11 @@ margin: 0 0 0 0 ;
         display: none;
       }
 
-      .hm_flow__step:nth-child(2) .hm_flow__step-body {
-        margin-top: 25px;
-
-        @include sp {
-          margin-top: 0;
-        }
-      }
-
-      .hm_flow__step:nth-child(3) .hm_flow__step-body {
-        margin-top: 25px;
-
-        @include sp {
-          margin-top: 0;
-        }
-      }
-
+      // Step margin top adjustment (keep for desktop only)
+      .hm_flow__step:nth-child(2) .hm_flow__step-body,
+      .hm_flow__step:nth-child(3) .hm_flow__step-body,
       .hm_flow__step:nth-child(4) .hm_flow__step-body {
-        margin-top: 19px;
+        margin-top: 25px;
 
         @include sp {
           margin-top: 0;
@@ -1112,6 +1190,10 @@ margin: 0 0 0 0 ;
 
       .hm_flow__step:nth-child(4) .hm_flow__step-img {
         margin-top: -17px;
+
+        @include sp {
+          margin-top: 0;
+        }
       }
     }
   }
