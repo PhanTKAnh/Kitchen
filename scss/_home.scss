@@ -889,7 +889,7 @@
       @include sp {
         padding: 20px 20px 24px 20px;
         border-radius: 16px;
-        margin: 12px 0 32px 0;
+        margin: 12px 0 10px 0;
       }
     }
 
@@ -903,10 +903,9 @@
       background-size: 24px;
 
       @include sp {
-        top: 47%;
-        width: 20px;
-        height: 20px;
-        background-size: 20px;
+        position: relative;
+        top: 0;
+        margin: 0 0 10px 0;
       }
     }
 
