@@ -342,6 +342,12 @@ header a .js_logo {
   width: 126px;
   height: 35px;
   object-fit: contain;
+  margin: 11px 0 0 0;
+}
+@media (max-width: 767px) {
+  header a .js_logo {
+    width: 100px;
+  }
 }
 header.active .spmenu_ico_open {
   display: none;
@@ -399,10 +405,6 @@ header.active .spmenu .sp_group_links a:after {
   width: 18px;
 }
 
-header.is-fixed .hd_nav_main li:not(:last-child) a {
-  color: #444949 !important;
-}
-
 .spmenu {
   background: #fff;
   display: none;
@@ -437,28 +439,29 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
 .hd_left {
   width: 30%;
 }
+@media (max-width: 767px) {
+  .hd_left {
+    width: 60%;
+  }
+}
 
 .hd_logotxt {
-  display: block;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-}
-
-.hd_logo {
-  max-width: 425px;
+  font-family: "DIN2014", "Arial", "Helvetica", sans-serif;
+  font-size: 8.6px;
+  margin: -10px 0 0 0;
+  letter-spacing: 0.08em;
 }
 @media (max-width: 767px) {
-  .hd_logo {
-    max-width: 92px;
-  }
-  .hd_logo a {
-    display: block;
+  .hd_logotxt {
+    font-size: 6.6px;
+    margin: -13px 0 0 0;
   }
 }
 
+.hd_logo a {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 767px) {
   .hd_right {
     padding: 0;
@@ -504,7 +507,7 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   gap: 19px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12px;
+  padding-top: 17px;
 }
 .hd_nav_main_list li:last-child a {
   background: #FF5F00;
@@ -514,7 +517,7 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0.08em;
-  padding: 13px 21px;
+  padding: 13px 20px;
   position: relative;
   border-radius: 30px;
 }
@@ -525,7 +528,7 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   background: rgba(253, 145, 82, 0.2);
   color: #FFFFFF;
 }
-.hd_nav_main_list a {
+.hd_nav_main_list :not(:last-child) a {
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
@@ -538,7 +541,7 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   text-decoration: none;
   transition: color 0.3s;
 }
-.hd_nav_main_list a::after {
+.hd_nav_main_list :not(:last-child) a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -550,16 +553,16 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-.hd_nav_main_list a:hover {
+.hd_nav_main_list :not(:last-child) a:hover {
   color: #FD9152;
 }
-.hd_nav_main_list a:hover::after {
+.hd_nav_main_list :not(:last-child) a:hover::after {
   transform: scaleX(1);
 }
-.hd_nav_main_list a.active {
+.hd_nav_main_list :not(:last-child) a.active {
   color: #FD9152;
 }
-.hd_nav_main_list a.active::after {
+.hd_nav_main_list :not(:last-child) a.active::after {
   transform: scaleX(1);
 }
 
@@ -635,7 +638,7 @@ main {
   line-height: 1.8;
   letter-spacing: 0.8px;
   color: rgba(68, 73, 73, 0.2);
-  margin: 8px 0 -42px 9px;
+  margin: 3px 0 -40px 9px;
 }
 @media (max-width: 767px) {
   .footer .footer__label {
@@ -659,7 +662,7 @@ main {
   display: block;
   width: 31%;
   border-bottom: 2px dashed #444949;
-  margin-top: 9px;
+  margin-top: 13px;
 }
 @media (max-width: 767px) {
   .footer .footer__title {
@@ -711,19 +714,21 @@ main {
   letter-spacing: 0.08em;
   color: #444949;
 }
-.footer .footer__phone .footer__phone-number {
+.footer .footer__phone .footer__phone-number a {
   font-family: "Hiragino Kaku Gothic Pro", sans-serif;
+  color: #444949;
   font-weight: 600;
   font-size: 28px;
   line-height: 1.8;
   letter-spacing: 0.08em;
   margin: 1px 0 0 47px;
   position: relative;
+  pointer-events: auto;
 }
-.footer .footer__phone .footer__phone-number::before {
+.footer .footer__phone .footer__phone-number a::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: -13px;
   left: -48px;
   width: 30px;
   height: 30px;
@@ -1059,8 +1064,9 @@ main {
   vertical-align: middle;
   text-transform: uppercase;
   padding-left: 15px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   margin: 18px 0;
+  padding-top: 3px;
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt .mv_ttl p {
@@ -1214,6 +1220,7 @@ main {
 @media (max-width: 767px) {
   .hm-problem .hm-problem__title {
     font-size: 24px;
+    letter-spacing: 0;
   }
 }
 .hm-problem .hm-problem__title span {
@@ -1224,7 +1231,8 @@ main {
 }
 @media (max-width: 767px) {
   .hm-problem .hm-problem__title span {
-    font-size: 32px;
+    font-size: 28px;
+    letter-spacing: 0;
   }
 }
 .hm-problem .hm-problem__cards {
@@ -1264,7 +1272,7 @@ main {
   width: 32px;
   height: 37px;
   opacity: 1;
-  top: 219px;
+  top: 226px;
   left: 221px;
   background: url("../imgs/home/Bubble Point.svg") no-repeat center/contain;
 }
@@ -1312,6 +1320,8 @@ main {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  image-rendering: auto;
+  object-fit: contain;
 }
 .hm-problem .problem-card .problem-card__text p {
   margin: 16px 0 0 0;
@@ -1622,6 +1632,9 @@ main {
     font-size: 14px;
     margin: 12px 0 0;
   }
+  .section-step .step-card .step-card__description .non-break {
+    display: none;
+  }
 }
 .section-step .step-card .step-card__description span {
   font-weight: 600;
@@ -1792,13 +1805,15 @@ main {
 }
 .section-works .case-item .case-item__descriptions {
   text-align: start;
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .section-works .case-item .case-item__summary {
   border: 2px solid rgba(68, 73, 73, 0.3);
   border-radius: 20px;
-  margin: 9px 0 49px 0;
-  padding: 32px 38px 26px 36px;
+  margin: 9px 0 0;
+  padding: 37px 38px 23px 34px;
 }
 .section-works .case-item .case-item__summary p {
   font-weight: 300;
@@ -1821,13 +1836,11 @@ main {
   }
 }
 .section-works .case-item .case-item__arrow {
-  position: absolute;
-  top: 45%;
-  left: 48%;
-  width: 24px;
-  height: 24px;
-  background: url("../imgs/home/icon-arrow-up.png") no-repeat center;
+  width: 21px;
+  height: 21px;
+  background: url(../imgs/home/icon-arrow-up.png) no-repeat center;
   background-size: 24px;
+  margin: 19px 0 11px 0;
 }
 @media (max-width: 767px) {
   .section-works .case-item .case-item__arrow {
@@ -1955,6 +1968,10 @@ main {
   margin-top: 6px;
   position: relative;
 }
+.hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-img img {
+  image-rendering: auto;
+  object-fit: contain;
+}
 @media (max-width: 767px) {
   .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-img {
     width: 100px;
@@ -1963,6 +1980,8 @@ main {
   .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-img img {
     width: 52px;
     height: 53px;
+    image-rendering: auto;
+    object-fit: contain;
   }
 }
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-img::after {
@@ -2050,7 +2069,7 @@ main {
   line-height: 180%;
   letter-spacing: 0.08em;
   color: #444949;
-  margin: 3px 0 -9px 0;
+  margin: 1px 0 -7px 0;
 }
 @media (max-width: 767px) {
   .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-body .hm_flow__contact .hm_flow__contact-tel {
@@ -2058,6 +2077,10 @@ main {
   }
 }
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-body .hm_flow__contact .hm_flow__contact-tel .hm_flow__contact-icon {
+  width: 30px;
+  height: 30px;
+  image-rendering: auto;
+  object-fit: contain;
   margin-right: 7px;
 }
 .hm_flow .hm_flow__content .hm_flow__container .hm_flow__step .hm_flow__step-body .hm_flow__btn-link {

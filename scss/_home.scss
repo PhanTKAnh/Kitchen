@@ -80,8 +80,7 @@
         }
 
         p {
-
-          background-color: $base-color;
+          background-color: #FFFFFF;
           font-weight: 700;
           font-size: 64px;
           line-height: 100%;
@@ -89,8 +88,9 @@
           vertical-align: middle;
           text-transform: uppercase;
           padding-left: 15px;
-          padding-bottom: 11px;
+          padding-bottom: 10px;
           margin: 18px 0;
+          padding-top: 3px;
 
           @include sp {
             font-size: 32px;
@@ -257,6 +257,8 @@
 
     @include sp {
       font-size: 24px;
+      letter-spacing: 0;
+      
     }
 
     span {
@@ -266,7 +268,8 @@
       letter-spacing: 0.08em;
 
       @include sp {
-        font-size: 32px;
+        font-size: 28px;
+         letter-spacing: 0;
       }
     }
   }
@@ -309,7 +312,7 @@
       width: 32px;
       height: 37px;
       opacity: 1;
-      top: 219px;
+      top: 226px;
       left: 221px;
       background: url("../imgs/home/Bubble Point.svg") no-repeat center/contain;
 
@@ -357,6 +360,8 @@
         width: 120px;
         height: 120px;
         border-radius: 50%;
+        image-rendering: auto;
+        object-fit: contain;
 
         @include sp {}
       }
@@ -683,6 +688,9 @@
       @include sp {
         font-size: 14px;
         margin: 12px 0 0;
+        .non-break{
+          display: none;
+        }
       }
 
       span {
@@ -863,15 +871,16 @@
 
     .case-item__descriptions {
       text-align: start;
-      position: relative;
-
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     .case-item__summary {
       border: 2px solid rgba(68, 73, 73, 0.3);
       border-radius: 20px;
-      margin: 9px 0 49px 0;
-      padding: 32px 38px 26px 36px;
+      margin: 9px 0 0;
+      padding: 37px 38px 23px 34px;
 
       p {
         font-weight: 300;
@@ -894,13 +903,11 @@
     }
 
     .case-item__arrow {
-      position: absolute;
-      top: 45%;
-      left: 48%;
-      width: 24px;
-      height: 24px;
-      background: url("../imgs/home/icon-arrow-up.png") no-repeat center;
+      width: 21px;
+      height: 21px;
+      background: url(../imgs/home/icon-arrow-up.png) no-repeat center;
       background-size: 24px;
+      margin: 19px 0 11px 0;
 
       @include sp {
         position: relative;
@@ -1034,12 +1041,20 @@
           margin-top: 6px;
           position: relative;
 
+          img {
+            image-rendering: auto;
+            object-fit: contain;
+          }
+
           @include sp {
             width: 100px;
             height: 100px;
-            img{
-               width: 52px;
-        height: 53px;
+
+            img {
+              width: 52px;
+              height: 53px;
+              image-rendering: auto;
+              object-fit: contain;
             }
           }
         }
@@ -1129,13 +1144,17 @@
               line-height: 180%;
               letter-spacing: 0.08em;
               color: $txt-color;
-              margin: 3px 0 -9px 0;
+              margin: 1px 0 -7px 0;
 
               @include sp {
                 font-size: 20px;
               }
 
               .hm_flow__contact-icon {
+                width: 30px;
+                height: 30px;
+                image-rendering: auto;
+                object-fit: contain;
                 margin-right: 7px;
               }
             }
