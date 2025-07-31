@@ -209,6 +209,11 @@ main {
   padding: 0 15px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 
 .container-lg {
   max-width: 1136px;
@@ -446,6 +451,7 @@ header.active .spmenu .sp_group_links a:after {
 }
 
 .hd_logotxt {
+  color: #444949;
   font-family: "DIN2014", "Arial", "Helvetica", sans-serif;
   font-size: 8.6px;
   margin: -10px 0 0 0;
@@ -1070,7 +1076,7 @@ main {
 }
 @media (max-width: 767px) {
   .hm_mainvisual .mv_inner .mv_cnt .mv_ttl p {
-    font-size: 32px;
+    font-size: 30px;
     padding: 5px 0 10px 0;
     text-align: center;
   }
