@@ -121,6 +121,11 @@ header {
       width: 126px;
       height: 35px;
       object-fit: contain;
+      margin: 11px 0 0 0;
+      @include sp{
+        width: 100px;
+      }
+
     }
   }
 
@@ -206,11 +211,6 @@ header {
     }
   }
 }
-
-header.is-fixed .hd_nav_main li:not(:last-child) a {
-  color: $txt-color !important;
-}
-
 .spmenu {
   background: #fff;
   display: none;
@@ -245,31 +245,33 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   // padding: 12px 0 0 0;
   width: 30%;
 
-  // @include sp {
-  //   padding: 11px 0 0 0;
-  //   width: 60%;
-  // }
+  @include sp {
+    width: 60%;
+  }
 }
 
 .hd_logotxt {
-  display: block;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
+  font-family: $sub-font;
+  font-size: 8.6px;
+  margin: -10px 0 0 0;
+  letter-spacing: 0.08em;
+  @include sp{
+    font-size: 6.6px;
+    margin: -13px 0 0 0;
+  }
 }
 
 .hd_logo {
-  max-width: 425px;
+  // max-width: 425px;
+
+  a {
+    display: flex;
+    flex-direction: column;
+
+  }
 
   @include sp {
-    max-width: 92px;
-
-    a {
-      display: block;
-
-    }
+  
   }
 }
 
@@ -325,19 +327,18 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
   gap: 19px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12px;
+  padding-top: 17px;
 
   li {
     &:last-child a {
       background: $btn-color;
       border: 1px solid $btn-color;
-      ;
       color: #FDF5ED;
       font-weight: 700;
       font-size: 16px;
       line-height: 100%;
       letter-spacing: 0.08em;
-      padding: 13px 21px;
+      padding: 13px 20px;
       position: relative;
       border-radius: 30px;
 
@@ -349,12 +350,12 @@ header.is-fixed .hd_nav_main li:not(:last-child) a {
       &:hover {
         background: #FD915233;
         color: #FFFFFF;
-        ;
+        
       }
     }
   }
 
-  a {
+  :not(:last-child) a {
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
@@ -442,7 +443,7 @@ main {
 .footer {
   padding: 124px 0 0;
 
- .footer__contact {
+  .footer__contact {
     background: url("../imgs/home/ft-contact-bg.jpg") top left -48px;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -471,7 +472,7 @@ main {
     line-height: 1.8;
     letter-spacing: 0.8px;
     color: rgba(68, 73, 73, 0.2);
-    margin: 8px 0 -42px 9px;
+    margin: 3px 0 -40px 9px;
 
     @include sp {
       font-size: 20px;
@@ -495,7 +496,7 @@ main {
       display: block;
       width: 31%;
       border-bottom: 2px dashed #444949;
-      margin-top: 9px;
+      margin-top: 13px;
     }
 
     @include sp {
@@ -517,7 +518,7 @@ main {
     }
   }
 
- .footer__text {
+  .footer__text {
     max-width: 567px;
     font-weight: 300;
     font-size: 20px;
@@ -543,7 +544,7 @@ main {
   }
 
   .footer__phone {
-   .footer__phone-label {
+    .footer__phone-label {
       font-weight: 300;
       font-size: 18px;
       line-height: 180%;
@@ -552,23 +553,29 @@ main {
     }
 
     .footer__phone-number {
-      font-family: $txt-font;
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 1.8;
-      letter-spacing: 0.08em;
-      margin: 1px 0 0 47px;
-      position: relative;
+      a {
+        font-family: $txt-font;
+        color: #444949;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.8;
+        letter-spacing: 0.08em;
+        margin: 1px 0 0 47px;
+        position: relative;
+        pointer-events: auto;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: -48px;
-        width: 30px;
-        height: 30px;
-        background: url(../imgs/home/Icon-phone.png) no-repeat center;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -13px;
+          left: -48px;
+          width: 30px;
+          height: 30px;
+          background: url(../imgs/home/Icon-phone.png) no-repeat center;
+        }
       }
+
+
 
       @include sp {
         font-size: 20px;
@@ -580,7 +587,7 @@ main {
   .footer__btn {
     margin: 8px 0 0 0;
 
-     .footer__btn-link {
+    .footer__btn-link {
       font-family: $title-font;
       width: 461px;
       height: 60px;
@@ -609,13 +616,13 @@ main {
       }
     }
 
-     .footer__btn-icon {
+    .footer__btn-icon {
       margin-right: 10px;
 
     }
   }
 
-   .footer__copyright {
+  .footer__copyright {
     background: #424242;
     text-align: center;
     margin-top: 30px;
@@ -628,7 +635,7 @@ main {
   @include sp {
     padding: 0;
 
-     .footer__contact {
+    .footer__contact {
       background-size: auto 105%;
       border-radius: 10px;
       margin: 20px 10px;
